@@ -17,6 +17,11 @@ Route::get('/', 'BlogController@index');
 
 Route::get('/posts/{hash}/download', 'BlogController@download')->name('download');
 
-Route::resource('posts', 'BlogController');
+Route::get('/posts/new', 'BlogController@newPost')->name('new');
 
+Route::post('/posts/create', 'BlogController@create')->name('create');
+
+Route::resource('posts', 'BlogController')->except([
+    'create', 'store'
+]);
 

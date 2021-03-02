@@ -28,7 +28,7 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a href="{{ route('posts.create') }}" class="button is-primary">
+                        <a href="{{ route('new') }}" class="button is-primary">
                         <strong>New Post</strong>
                     </a>
                     </div>

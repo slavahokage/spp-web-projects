@@ -18,13 +18,13 @@ class BlogController extends Controller
     }
 
 
-    public function create()
+    public function newPost()
     {
-        return view('posts.create');
+        return view('posts.new');
     }
 
 
-    public function store(Request $request)
+    public function create(Request $request)
     {
 
         $validated = $request->validate([
