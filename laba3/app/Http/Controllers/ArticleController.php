@@ -64,7 +64,7 @@ class ArticleController extends Controller
         $article->body = $request->input('body');
 
         if($article->save()) {
-            return new ArticleResource($article);
+            return response()->json(['status' => 'Success']);
         }
         
     }
@@ -103,7 +103,7 @@ class ArticleController extends Controller
         $article = Article::find($id)->where('user_id', $user->id);
 
         if($article->delete()) {
-            return new ArticleResource($article);
+            return response()->json(['status' => 'Deleted']);
         }
     }
 
